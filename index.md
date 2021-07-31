@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+---
+layout: post
+title: "About..."
+updated: 2021-01-15
+---
 
-You can use the [editor on GitHub](https://github.com/tezblog/tezblog.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+## About Tez
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+40대 아재, 문과 출신이지만 감수성 떨어짐, 모 기업 기획팀 근무, 배불뚝이, 많이 게으름, 잘 안움직임
 
-### Markdown
+## Tez Blog
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+2010 년대 초반부터 블로그에 관심가지기 시작했다. 역마살이 꼈는지 티스토리, 네이버, 블로그스팟, 워드프레스를 전전하다가 [깃허브](https://github.com/)를 알게 되고는, 여기에 새로이 블로그를 만들어 보았다.
 
-```markdown
-Syntax highlighted code block
+개인적인 관심사항이나 스터디 한 것들을 두서없이 기록할 생각이다. 나중에 기억이 가물가물할 때 되살려보기 위한 것이 주 목적이라, 포스팅 내용이 매우 불친절할 수도 있겠지만 아무쪼록 양해를 바란다.
 
-# Header 1
-## Header 2
-### Header 3
+먼저 다른 블로그 서비스에 담아뒀던 포스팅들을 옮겨오는 작업부터 할 것이다. 이제 시작합니다.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```py
+def sayhello():
+    print('Hello Blog! 🙋‍♂️🙋‍♀️)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tezblog/tezblog.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+{:.python}

@@ -1,1 +1,10 @@
-theme: jekyll-theme-minimal
+title: "TEZINISM"
+description: "이것저것 기록해두는 개인 블로그"
+permalink: post/:title
+url: https://tezinism.github.io
+tag_order: [algorithm,dev]
+
+markdown: kramdown
+kramdown:
+    syntax_highlighter_opts:
+        disable: true

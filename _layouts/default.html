@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.17.1/styles/github.min.css"/>
+  </head>
+  <body>
+    <div id="header">
+      <div>
+        <div id="header-title">{{ site.title }}</div>
+        <ul id="nav">
+          <li><a href="/">home</a></li>
+          {% for tag in site.tag_order %}
+            <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div id="main">
+      <div>
+      
+        {{ content }}
+        
+      </div>
+    </div>
+    <div id="footer">
+      <div>
+        <div id="footer-msg">
+          <div class="msg">This blog is powered by Github,</div><div class="msg">and designed by Tez.</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.17.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.17.1/languages/excel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.17.1/languages/vbnet.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
