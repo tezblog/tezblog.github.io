@@ -18,6 +18,6 @@ updated: 2021-01-15
 
 ```py
 def sayhello():
-    print('Hello Blog! 🙋‍♂️🙋‍♀️)
+    print('Hello Blog! 🙋‍♂️🙋‍♀️')
 ```
 {:.python}
