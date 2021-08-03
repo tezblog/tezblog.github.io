@@ -72,7 +72,7 @@ print(arr.index(41))        # 12
 
 arr = [29, 31, 37, 41, 41, 41, 41, 41, 41, 41, 43, 47, 53]
 print(bisearch(arr, 41))    # 6
-print(arr.index(41))        # 3
+print(arr.index(41))        # 3  <- 값이 다름에 주의!!
 ```
 {:.python}
 
