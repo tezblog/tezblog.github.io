@@ -31,7 +31,7 @@ tags: [msoffice,formula]
 
 ## 배열수식을 이용한 방법
 
-![그림01](img/msoffice/formula/formula-0006.png)
+![그림01](/img/msoffice/formula/formula-0006.png)
 
 ```excel
 {= VLOOKUP( 검색값1&검색값2, CHOOSE( {1, 2}, 검색기준열1&검색기준열2, 검색대상열 ), 2, false )}
