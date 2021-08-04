@@ -2,7 +2,7 @@
 layout: post
 title: "VLOOKUP,CHOOSE: 오른쪽열 기준으로 보다 왼쪽열 내용 VLOOKUP 검색"
 updated: 2021-05-03
-tags: [msoffice,excel]
+tags: [msoffice,formula]
 ---
 
 ## VLOOKUP 검색범위의 문제

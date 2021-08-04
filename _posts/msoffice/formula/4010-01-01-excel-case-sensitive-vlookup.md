@@ -2,7 +2,7 @@
 layout: post
 title: "INDEX,MATCH,EXACT: 대소문자를 구별하는 VLOOKUP 검색 방법"
 updated: 2021-05-05
-tags: [msoffice,excel]
+tags: [msoffice,formula]
 ---
 
 ## 대소문자를 구별하지 않는 VLOOKUP
