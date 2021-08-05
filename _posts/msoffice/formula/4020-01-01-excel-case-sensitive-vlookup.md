@@ -28,4 +28,4 @@ tags: [msoffice,formula]
 
 대/소문자 구별의 핵심은 EXACT 함수인데, 이 함수를 입력할 때 나오는 도움말 팝업에 "대/소문자를 구분합니다." 라고 나온다. EXACT 함수의 한쪽 인수를 셀 하나로 두고, 다른쪽 인수를 범위로 두어 배열수식으로 입력하면, 일일이 대소문자 하나하나를 비교하여 완전일치 여부를 다시 배열로 반환한다. 이를 INDEX, MATCH 함수가 받아서 처리하는 구조이다.
 
-참고로 INDEX, MATCH 함수는 VLOOKUP 함수의 대안으로 자주 거론되는 함수조합으로, 포털에서 "INDEX, MATCH" 등으로 검색하면 쉽게 찾아볼 수 있다. 공식처럼 외워두면 편리하다.
+참고로 INDEX, MATCH 함수는 VLOOKUP 함수의 대안으로 자주 거론되는 함수조합으로, 공식처럼 외워두면 매우 편리하다. [별도포스팅](https://tezblog.github.io/post/excel-index-match-for-vlookup-alternative)에 소개하였으니 참고해보기 바란다.
