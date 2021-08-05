@@ -27,7 +27,7 @@ img {vertical-align: bottom;}
 #content ul {font-size: 14px; background-color: #eeeeee; padding: 12px;}
 #content blockquote,
 #content > ul,
-#content pre {margin: 24px 0; font-size: 16px; background-color: #eeeeee; padding: 12px;}
+#content pre {margin: 24px 0; font-size: 14px; background-color: #eeeeee; padding: 12px;}
 #content ul li {margin-left: 18px;}
 #content ul li:before {content:'\2022'; display: inline-block; margin-left: -18px; width: 18px;}
 #content blockquote p {margin: 0;}
@@ -52,8 +52,9 @@ img {vertical-align: bottom;}
     display: inline-block; width: 80px; text-align: center;
 }
 
-#content ul.infomation:after {
-    background-color: #ba55de;
+#content ul.infomation:after,
+#content pre.pseudo:after {
+    background-color: #800080;
 }
 
 #content pre.javascript:after,
