@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CELL: Sheet 이름을 불러오는 함수식
+title: "CELL: Sheet 이름을 불러오는 함수식"
 updated: 2021-08-05
 tags: [msoffice,formula]
 ---
