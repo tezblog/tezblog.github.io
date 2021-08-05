@@ -31,13 +31,4 @@ CHOOSE 는 본래 첫번째 인수에 번호 n 을 지정하면, 뒤 이어진 �
 
 ## INDEX, MATCH 함수조합 사용
 
-![그림00](/img/msoffice/formula/formula-0004.png)
-
-```excel
-= INDEX( 검색대상열, MATCH( 검색값, 검색기준열, 0 ))
-```
-{:.excel}
-
-VLOOKUP 대신 INDEX, MATCH 함수를 사용하여 동일한 기능을 구현할 수 있다. 게다가 INDEX, MATCH 는 `검색기준열`과 `검색대상열`을 별도로 지정할 수 있기 때문에, 보다 유연한 검색이 가능하다.
-
-`검색값`에 해당하는 위치를 MATCH 함수가 찾아, INDEX 함수에 전달하는 구조다. 포털 사이트에서 "INDEX, MATCH" 등으로 검색하면 쉽게 찾을 수 있는데, 공식처럼 외워두면 편리하다.
+INDEX, MATCH 함수조합을 사용하면 보다 손쉽게 왼쪽열 검색을 할 수 있다. 이에 대해서는 [별도 포스팅](/post/excel-index-match-for-vlookup-alternative)을 참고하기 바란다. (개인적으로는 VLOOKUP, CHOOSE 보다 INDEX, MATCH 를 추천한다.)

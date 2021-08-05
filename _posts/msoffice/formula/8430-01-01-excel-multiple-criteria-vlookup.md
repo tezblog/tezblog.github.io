@@ -45,4 +45,4 @@ Helper 열 방식과 마찬가지로, & 연산자 대신 CONCATENATE 함수를 �
 
 ## INDEX, MATCH 함수를 이용한 방법
 
-[별도 포스팅 update 예정]
+VLOOKUP 대신 사용할 수 있는 INDEX, MATCH 로도 두가지 이상 조건 검색을 할 수 있다. 이에 대해서는 [별도 포스팅](/post/excel-index-match-for-vlookup-alternative)을 참고하기 바란다. (개인적으로는 이 경우 INDEX, MATCH 사용을 추천한다.)
