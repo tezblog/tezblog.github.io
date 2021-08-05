@@ -14,6 +14,7 @@ tags: [msoffice,formula]
 ```excel
 = MID( CELL( "filename", 셀 ), FIND( "]", CELL( "filename", 셀 )) + 1, 256 )
 ```
+{:.excel}
 
 위 식에서 `셀` 부분에는 이름을 불러오길 원하는 Sheet 안의 아무 셀이나 지정하면 된다. 다른 Sheet 의 셀을 지정하면 그 다른 Sheet 의 이름을 불러온다. 그리고 Sheet 이름을 바뀌면 함수식의 결과도 알아서 자동으로 바뀐다.
 
