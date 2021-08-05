@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX, MATCH: VLOOKUP 검색을 단점없이 대신할 수 있는 보완 함수"
+title: "INDEX,MATCH: VLOOKUP 검색 단점없이 대신 사용할 수 있는 보완 함수"
 updated: 2021-08-05
 tags: [msoffice,formula]
 ---
