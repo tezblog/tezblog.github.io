@@ -85,12 +85,14 @@ print(arr.index(41))        # 3  <- 값이 다름에 주의!!
 Python 은 보다 범용적으로 사용할 수 있도록 bisect 모듈에서 bisect_left 와 bisect_right 함수를 제공한다.
 
 ```py
-seq = [29, 31, 37, 41, 41, 41, 41, 41, 41, 41, 43, 47, 53]
-print(bisect_left(seq, 33))     # 2
-print(bisect_right(seq, 33))    # 2
+from bisect import bisect_left, bisect_right
 
-print(bisect_left(seq, 41))     # 3
-print(bisect_right(seq, 41))    # 10
+arr = [29, 31, 37, 41, 41, 41, 41, 41, 41, 41, 43, 47, 53]
+print(bisect_left(arr, 33))     # 2
+print(bisect_right(arr, 33))    # 2
+
+print(bisect_left(arr, 41))     # 3
+print(bisect_right(arr, 41))    # 10
 ```
 {:.python}
 
