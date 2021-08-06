@@ -24,7 +24,7 @@ gcd(x, y) == gcd(y, x%y)
 ```
 {:.pseudo}
 
-## 유클리드 호제법 알고리즘
+## Python 코드로 구현
 
 ```py
 def gcd(x, y):
