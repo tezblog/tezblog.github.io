@@ -35,11 +35,12 @@ End Function
 
 ## 함수식 사용
 
-![그림00](/img/msoffice/excel/excel-0015.png)
+![그림00](/img/msoffice/formula/formula-0015.png)
 
 ```excel
 = CountColor( 범위, 참고셀 )
 ```
+{:.excel}
 
 지정한 `범위` 안에 `참고셀`과 같은 배경색을 지닌 셀 개수를 반환한다.
 
