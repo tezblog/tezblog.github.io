@@ -121,9 +121,10 @@ print(fib(20), fib.counter)     # 6765 21
 재귀호출 코드는 상당부분 반복문으로 해결할 수 있다고 한다. 피보나치 수열도 재귀호출 말고 반복문으로 구현할 수 있다.
 
 ```py
-def fib(n, cache={}):
+def fib(n):
     fib.counter += 1
-
+    
+    cache = {}
     cache[0] = 0
     cache[1] = 1
     for i in range(2, n+1):
