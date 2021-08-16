@@ -16,6 +16,7 @@ Haversine 공식이라는 것이 있다. [위키피디아](https://en.wikipedia.
 ```excel
 = ACOS( COS( RADIANS( 90-위도1 )) * COS( RADIANS( 90-위도2 )) + SIN( RADIANS( 90-위도1 )) * SIN( RADIANS( 90-위도2 )) * COS( RADIANS( 경도1-경도2 ))) * 6378.137
 ```
+{:.excel}
 
 어느 한 지점의 위도/경도를 `위도1`, `경도1`에 넣고, 다른 지점의 위도/경도를 `위도2`, `경도2`에 넣어 계산하면 된다. 결과로 구해지는 수치는 Km 단위이다.
 
