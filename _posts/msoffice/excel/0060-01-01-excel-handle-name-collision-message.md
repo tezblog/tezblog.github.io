@@ -9,7 +9,7 @@ tags: [msoffice,excel]
 
 엑셀을 사용하다보면 아래와 같은 짜증나는 메시지를 만날 때가 종종 있다. 경우에 따라선 Enter 키를 누른 채 하염없이 엑셀 화면만 바라보게 된다.
 
-![그림00](/img/msoffice/excel/excel-0009.png)
+![그림00](/img/msoffice/excel/excel-0006.png)
 
 보통 Sheet를 통채로 복사하거나 하면 만나기 쉬운 메세지인데, 내용만을 보자면 이름 정의가 중복이 되어 충돌이 날 수 있다는 경고를 보내는 것이다.
 
