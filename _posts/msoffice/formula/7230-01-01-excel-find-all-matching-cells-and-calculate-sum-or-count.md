@@ -15,7 +15,7 @@ tags: [msoffice,formula]
 = SUMPRODUCT( COUNTIFS( 데이터범위, 조건범위 ))
 = SUMPRODUCT( SUMIFS( 합계대상데이터, 데이터범위, 조건범위 ))
 ```
-{.excel}
+{:.excel}
 
 `데이터범위`와 `조건범위`가 주어졌을 때, 위 함수식은 두 범위에서 공통적으로 일치하는 항목들의 개수를, 아래 함수식은 합계를 구해준다.
 
