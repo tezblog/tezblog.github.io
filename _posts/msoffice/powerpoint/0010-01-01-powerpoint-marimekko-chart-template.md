@@ -17,7 +17,7 @@ tags: [msoffice,powerpoint]
 
 아래 파일은 마리메꼬 차트를 담은 템플릿이다.
 
-- ![marimekko-chart.pptx](/resource/msoffice/powerpoint/marimekko-chart.pptx)
+- [marimekko-chart.pptx](/resource/msoffice/powerpoint/marimekko-chart.pptx)
 {:.file}
 
 데이터를 입력하기 위해선, 차트를 선택한뒤, 마우스 우측 키를 눌러서 데이터 편집을 선택하면 된다. 엑셀이 열리게 되는데 "Data" Sheet의 노란색 음영 부분에 값을 넣으면 자동으로 그려진다. 가로, 세로 최대 15 x 10 개까지 그릴 수 있으며, 공백이 있어도 잘 작동한다.
