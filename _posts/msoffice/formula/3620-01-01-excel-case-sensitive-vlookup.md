@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX,MATCH,EXACT: 대소문자를 구별하는 VLOOKUP 검색 방법"
+title: "INDEX,MATCH: 대소문자를 구별하는 VLOOKUP 검색 방법"
 updated: 2021-05-05
 tags: [msoffice,formula]
 ---
