@@ -7,9 +7,9 @@ layout: default
     Last updated: {{ page.updated }},
     {% if page.tags.size > 0 %}
       {% assign tag = page.tags | first %}
-      , Tag: <a href="{{ site.url | append: '/tag/' | append: tag }}">{{ tag }}</a>
+      Tag: <a href="{{ site.url | append: '/tag/' | append: tag }}">{{ tag }}</a>
     {% else %}
-      , Tag: <a href="/">home</a>
+      Tag: <a href="/">home</a>
     {% endif %}
   </div>
 </div>
