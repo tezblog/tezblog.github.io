@@ -16,6 +16,7 @@ tags: [msoffice,excel]
 ![그림01](/img/msoffice/excel/excel-0019.png)
 
 - [three-dimensional-sensitivity-analysis.xlsx](/resource/msoffice/excel/three-dimensional-sensitivity-analysis.xlsx)
+{:.file}
 
 위 파일에서 가장 중요한 부분은 M ~ Q 열에 위치한 Case 이다. "환율", "이자율", "법인세율" 이라는 3 가지 독립변수의 변화를 미리 Case 화 하였다. 3개 독립변수를 Case 로 만들어뒀기 때문에 사실상 독립변수는 1개 뿐이다. Case 를 잘 활용하면 4 개 이상의 독립변수로도 분석이 가능할 것이다.
 
