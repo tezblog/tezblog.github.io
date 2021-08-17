@@ -2,7 +2,7 @@
 layout: post
 title: "INDEX,MATCH: 조건에 부합하는 가장 마지막 항목 검색"
 updated: 2021-08-17
-tags: [msoffice, formula]
+tags: [msoffice,formula]
 ---
 
 ## 조건 부합하는 가장 마지막 항목 검색 함수식
