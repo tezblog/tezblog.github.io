@@ -9,13 +9,13 @@ tags: [msoffice,formula]
 
 엑셀에서 이 셀이 어떤 의미를 가지는가 부연설명을 하고싶을 때, 일반적으로는 아래처럼 메모 기능을 사용한다.
 
-![그림01](/img/msoffice/formula/formula/0028.png)
+![그림01](/img/msoffice/formula/formula-0028.png)
 
 메모 말고도 함수식으로 셀 안에 직접 부연설명이나 주석을 넣을 수 있는 방법이 있는데, 아래에서 소개해본다.
 
 ## N 함수 사용 주석 달기
 
-![그림00](/img/msoffice/formula/formula/0027.png)
+![그림00](/img/msoffice/formula/formula-0027.png)
 
 ```excel
 = 수식 + N("주석")
