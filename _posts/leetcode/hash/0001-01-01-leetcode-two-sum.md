@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Two Sum"
+title: "1. Two Sum"
 updated: "2021-08-23"
 tags: [leetcode,hash]
 ---
@@ -45,6 +45,6 @@ class Solution:
 ```
 {:.python}
 
-nums 를 한번만 순회하면서, y (`target - x`) 를 계산하여, hashtable 에 없다면 저장해 둔다. 순회를 하다가 y 가 hashtable 에 있다면 저장된 내용과 함께 리턴한다.
+nums 를 한번만 순회하면서, `y = target - x` 를 계산하여, hashtable 에 없다면 저장해 둔다. 순회를 하다가 y 가 hashtable 에 있다면 저장된 내용과 함께 리턴한다. 반드시 `x + y == target` 이 되는 케이스가 한개 존재하기 때문에 가능한 풀이다.
 
 시간복잡도는 O(n) 이며, 실행속도는 56 ms 가 나왔다.
