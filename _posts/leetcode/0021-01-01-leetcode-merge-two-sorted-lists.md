@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "21. Merge Two Sorted Lists"
-updated: 2021-08-23
+updated: 2021-08-24
 tags: [leetcode,easy,linkedlist,recursion]
 ---
 
