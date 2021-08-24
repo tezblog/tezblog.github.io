@@ -2,7 +2,7 @@
 layout: post
 title: "20. Valid Parentheses"
 updated: 2021-08-23
-tags: [leetcode,snq]
+tags: [leetcode,stack]
 ---
 
 ## 문제
