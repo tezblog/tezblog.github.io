@@ -38,7 +38,7 @@ Fibonacci 수열과 상당히 닮았다. 간단히 생각하면, 계단이 n-2 �
 
 시간복잡도는 O(2^n) 이다. 무수히 많은 재귀호출을 구하기에, 시간초과로 문제를 통과할 수 없었다.
 
-## Recursive with Memoization
+## Recursive with Memoization (Top-Down Dynamic Programming)
 
 ```py
 class Solution:
@@ -83,3 +83,23 @@ class Solution:
         return f(n)
 ```
 {:.python}
+
+## Iterative (Bottom-Up Dynamic Programming)
+
+```py
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        
+        cache = {}
+        
+        cache[1] = 1
+        cache[2] = 2
+        
+        for x in range(3, n+1):
+            cache[x] = cache[x-2] + cache[x-1]
+            
+        return cache[n]
+```
+{:.python}
+
+시간복잡도는 마찬가지로 O(n) 이며, 실행시간도 20 ms 로 같았다.
