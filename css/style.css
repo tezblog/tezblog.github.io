@@ -55,7 +55,7 @@ img {vertical-align: bottom;}
 #content ul.information:after,
 #content ul.file:after,
 #content pre.pseudo:after {
-    background-color: #800080;
+    background-color: #87ceeb;
 }
 
 #content pre.javascript:after,
