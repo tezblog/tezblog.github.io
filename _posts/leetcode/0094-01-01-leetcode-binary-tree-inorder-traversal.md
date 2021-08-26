@@ -98,11 +98,11 @@ while stack:
     
     if n:
         if v:
-            print(n.data, end=' ')
+            a += [n.val]    # 탐색노드 처리
         else:
-            stack += [(n.right, False)]
-            stack += [(n.left, False)]
-            stack += [(n, True)]
+            stack.append((n.right, False))
+            stack.append((n.left, False))
+            stack.append((n, True))
 
 # Inorder 순회
 while stack:
@@ -110,12 +110,11 @@ while stack:
     
     if n:
         if v:
-            print(n.data, end=' ')
+            a += [n.val]    # 탐색노드 처리
         else:
-            stack += [(n.right, False)]
-            stack += [(n, True)]
-            stack += [(n.left, False)]
-            
+            stack.append((n.right, False))
+            stack.append((n, True))
+            stack.append((n.left, False))
             
 # Postorder 순회
 while stack:
@@ -123,14 +122,36 @@ while stack:
     
     if n:
         if v:
-            print(n.data, end=' ')
+            a += [n.val]    # 탐색노드 처리
         else:
-            stack += [(n, True)]
-            stack += [(n.right, False)]
-            stack += [(n.left, False)]
+            stack.append((n, True))
+            stack.append((n.right, False))
+            stack.append((n.left, False))
 ```
 {:.python}
 
 ## Morris Traversal
 
-TBD
+```py
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        
+        a = []
+        n = root
+        
+        while n:
+            if n.left:
+                t = n.left
+                while t.right: t = t.right
+                t.right, n.left, n = n, None, n.left
+            else:
+                a += [n.val]
+                n = n.right
+                
+        return a
+```
+{:.python}
+
+노드 간 경로를 변형시켜서 Stack 과 같은 별도 메모리 없이 탐색하는 로직이다. 경로가 변형되기에 한번 탐색을 마치면 다시 탐색은 불가능하다.
+
+실행시간은 32 ms 이었다.
