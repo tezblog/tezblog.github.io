@@ -2,7 +2,7 @@
 layout: post
 title: "70. Climbing Stairs"
 updated: 2021-08-25
-tags: [leetcode,easy,math,dynamic_programming,memoization]
+tags: [leetcode,easy,dynamic_programming,memoization]
 ---
 
 ## 문제
