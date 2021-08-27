@@ -2,7 +2,7 @@
 layout: post
 title: "Lambda 표현식 안에 Statement 를 사용하기"
 updated: 2021-07-30
-tags: [algorithm,useful]
+tags: [dev,useful]
 ---
 
 ## Lambda 표현식

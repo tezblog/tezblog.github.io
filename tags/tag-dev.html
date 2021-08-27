@@ -8,8 +8,8 @@ title: dev
   <h1>{{ page.title }} 태그 포스팅들</h1>
 </div>
 <div id="tag-content">
-    {% assign subs = "blog,tool" | split: "," %}
-    {% assign subs_desc = "Blog:,Tool:" | split: "," %}
+    {% assign subs = "blog,tool,useful" | split: "," %}
+    {% assign subs_desc = "Blog:,Tool:,Useful Code Snippet:" | split: "," %}
     {% assign to = subs.size | minus: 1 %}
     
     {% for i in (0..to) %}

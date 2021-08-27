@@ -2,7 +2,7 @@
 layout: post
 title: "List Comprehension 표현식에 Break 사용하기"
 updated: 2021-04-01
-tags: [algorithm,useful]
+tags: [dev,useful]
 ---
 
 ## Comprehension 표현식 개체 순회 도중 Break 사용

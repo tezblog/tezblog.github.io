@@ -2,7 +2,7 @@
 layout: post
 title: "리스트에서 기존 순서를 유지하면서 고유한 요소만 남기는 방법"
 updated: 2021-03-25
-tags: [algorithm,useful]
+tags: [dev,useful]
 ---
 
 ## 중복없는 고유한 요소만 남기기
