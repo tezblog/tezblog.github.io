@@ -2,7 +2,7 @@
 layout: post
 title: "53. Maximum Subarray"
 updated: 2021-08-25
-tags: [leetcode,easy,array,divide_and_conquer,dynamic_programming]
+tags: [leetcode]
 ---
 
 ## 문제
