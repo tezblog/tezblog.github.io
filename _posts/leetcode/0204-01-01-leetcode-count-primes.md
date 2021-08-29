@@ -61,4 +61,4 @@ def gen_primes():
 
 구글링으로 어느 한 [사이트](https://code.activestate.com/recipes/117119-sieve-of-eratosthenes/)에서, 소수를 2 부터 순서대로 yield 하는 제너레이터 코드를 찾을 수 있었다. n 이라는 숫자에 상관없이 지속 생성이 가능한 코드로 이 또한 에라토스테네스의 체 방식으로 소수를 생성한다.
 
-제너레이터를 iterator 변수에 할당한 다음, 리스트 comprehension 표현식으로 소수의 개수를 구하는데, `if x < n or iterator.close()` 구문으로 yield 된 소수 x 가 n 보다 더이상 작지 않을때는 제너레이터를 break 하도록 했다. 이에 대해서는 [별도 포스팅](/post/break-list-comprehension)을 참고해보자.
+제너레이터를 iterator 변수에 할당한 다음, 리스트 Comprehension 표현식으로 소수의 개수를 구하는데, `if x < n or iterator.close()` 구문으로 yield 된 소수 x 가 n 보다 더이상 작지 않을때는 제너레이터를 break 하도록 했다. 이에 대해서는 [별도 포스팅](/post/break-list-comprehension)을 참고해보자.
