@@ -2,49 +2,34 @@
 layout: post
 title: "1. Two Sum"
 updated: "2021-08-23"
-tags: [leetcode,easy,array,hash_table]
+tags: [leetcode,list]
 ---
 
 ## 문제
 
 [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
 
-주어지는 Array 에서, 두 요소를 골랐을 때, 그 합이 target 이 되는 케이스를 리턴하는 문제다. 반드시 하나의 정답만이 존재하도록 문제가 꾸며져 있다.
+주어지는 Array 에서, 두 요소를 골랐을 때, 그 합이 target 이 되는 케이스를 리턴하는 문제다.
 
-## Brute Force
+단순하게 생각한다면, 이중루프를 사용하면 된다. 반드시 합이 target 이 되는 오직 하나의 케이스가 존재한다고 되어 있으므로, Brute Force 방식으로 찾다보면 언젠가는 정답이 얻어걸리게 되어 있다.
 
-```py
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
-        for i, x in enumerate(nums[:-1]):
-            for j, y in enumerate(nums[i+1:], i+1):
-                if x+y == target:
-                    return [i, j]
-```
-{:.python}
+하지만 문제 말미에도, 이중루프 즉 시간복잡도가 O(n^2) 이 되는 로직이 아니라, 그보다 더 작은 시간복잡도를 가지는 로직으로 구해보라고 권하고 있다. 즉, 더 효율적인 방법이 존재한다.
 
-이중루프로 모든 케이스를 순회하면서, 두 요소의 합이 target 이 될 때 리턴한다.
-
-실행시간은 3808 ms 이었다.
-
-## Hash Table
+## Hash Table 을 활용
 
 ```py
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
-        hashtable = {}
+        d = {}
         
         for i, x in enumerate(nums):
             y = target - x
-            if y in hashtable:
-                return [hashtable[y], i]
-            else:
-                hashtable[x] = i
+            
+            if y in d: return [d[y], i]
+            else: d[x] = i
 ```
 {:.python}
 
-nums 를 한번만 순회하면서, `y = target - x` 를 계산하여, hashtable 에 없다면 저장해 둔다. 순회를 하다가 y 가 hashtable 에 있다면 저장된 내용과 함께 리턴한다. 반드시 `x + y == target` 이 되는 케이스가 한개 존재하기 때문에 가능한 풀이다.
+nums 를 x 로 순회하며서, x 의 인덱스 i 를 d 딕셔너리에 저장해둔다. 계속 순회하면서 x 의 보수 (즉 `target - x`) 가 d 에 저장되어있음을 발견한다면, `x + y == target` 이 되는 케이스를 찾은 셈이므로 즉시 리턴을 한다. 합이 target 이 되는 x, y 쌍이 반드시 존재한다고 했으므로, 순회를 하다보면 언젠가는 정답이 걸리게 되어 있다.
 
-Brute Force 와는 달리 루프 하나만으로 구현되기에, 실행시간은 56 ms 이었다.
+여기서 d 가 Hash Table 역할을 하며, 이론적으로 Hash Table 데이터에 접근하는 시간복잡도는 O(1) 이므로, 전체적으로 루프 1 번만 하게 되어, 이 풀이의 시간복잡도는 O(n) 이 된다.
