@@ -9,7 +9,7 @@ tags: [leetcode,graph]
 
 [https://leetcode.com/problems/maximum-depth-of-binary-tree/](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
-트리를 모든 노드를 탐색하면서 최대 깊이 (트리의 높이) 를 구하면 된다.
+트리의 모든 노드를 탐색하고, 최대 깊이 (트리의 높이) 를 구하면 된다.
 
 Stack 을 사용하는 DFS (Depth First Search) 방식과, Queue 를 사용하는 BFS (Breadth First Search) 방식으로 탐색할 수 있다. 자식 노드를 탐색할 때마다 깊이를 1 씩 늘려주고, 이 중 최대값을 리턴하면 된다.
 
