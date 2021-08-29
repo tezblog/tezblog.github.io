@@ -8,9 +8,8 @@ title: leetcode
   <h1>{{ page.title }} 태그 포스팅들</h1>
 </div>
 <div id="tag-content">
-    {% assign root = page.title %}
-    {% assign subs = "list" | split: "," %}
-    {% assign subs_desc = "Array and Linked List:" | split: "," %}
+    {% assign subs = "list,graph" | split: "," %}
+    {% assign subs_desc = "Array and Linked List:,Graph:" | split: "," %}
     {% assign to = subs.size | minus: 1 %}
     
     {% for i in (0..to) %}
@@ -20,7 +19,7 @@ title: leetcode
         {% assign tag = subs[i] %}
         {% assign sorted = site.tags[tag] %}
         {% for post in sorted reversed %}
-            {% if post.tags contains root %}
+            {% if post.tags contains page.title %}
                 <div class="post-list">
                     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <div class="post-desc">Last updated: {{ post.updated }}</div>
