@@ -3,7 +3,7 @@ welcomemsg: "Welcome To Tezblog"
 description: "이것저것 기록해두는 개인 블로그"
 permalink: post/:title
 url: https://tezblog.github.io
-tag_order: [algorithm,dev,msoffice]
+tag_order: [leetcode,dev,msoffice]
 
 markdown: kramdown
 kramdown:
