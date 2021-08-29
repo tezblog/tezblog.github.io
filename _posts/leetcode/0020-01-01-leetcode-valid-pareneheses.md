@@ -2,7 +2,7 @@
 layout: post
 title: "20. Valid Parentheses"
 updated: 2021-08-23
-tags: [leetcode,easy,string,stack]
+tags: [leetcode,array]
 ---
 
 ## 문제
@@ -11,50 +11,35 @@ tags: [leetcode,easy,string,stack]
 
 세가지 형태의 괄호가 올바르게 맞물려있는지를 판단하는 문제다.
 
-## 문자열에서 직접 제거 1
+올바른 형태의 괄호란, 여는괄호와 닫는괄호가 제대로 맞물려 있는 경우를 뜻한다. 구체적으로는 주어지는 문자열 s 안에서 `()`, `{}`, `[]` 문자열을, 빈 문자열이 될 때까지 계속 지워나갈 수 있는 경우이다.
+
+이 방식을 직접 코드로 적용하면 문제를 해결할 수 있다.
+
+## 문자열에서 직접 제거
 
 ```py
+import re
+
 class Solution:
     def isValid(self, s: str) -> bool:
-        
-        import re
-        
         while 1:
             p = s
             s = re.sub(r'\(\)|\{\}|\[\]', '', s)
             if len(s) == len(p): break
                 
-        return False if s else True
+        return s == ''
 ```
 {:.python}
 
-정규식을 사용하여, `()`, `{}`, `[]` 인 경우를 계속 삭제해 나간다. 더 이상 삭제가 불가능하다면 (삭제전 문자열인 p 와 삭제후 문자열인 s 의 길이가 같다면) 반복을 종료하며, 종료 후 남게 되는 s 가 빈 문자열일 때만 True 를 리턴하는 구조다.
+s 안에서 `()`, `{}`, `[]` 인 패턴을 정규식으로 찾아서 계속 삭제해 나간다. 더 이상 삭제가 불가능하다면 (삭제전 문자열인 p 와 삭제후 문자열인 s 의 길이가 같다면) 반복을 종료하며, 종료 후 남게 되는 s 가 빈 문자열인지를 판단하는 구조다.
 
-실행시간은 160 ms 가 나왔다.
+`re.sub(r'\(\)|\{\}|\[\]', '', s)` 대신 `s.replace('()', '').replace('{}', '').replace('[]', '')` 을 사용해도 된다. (실행속도는 replace 함수 쪽이 훨씬 빨랐다.)
 
-## 문자열에서 직접 제거 2
+## Stack 을 사용하여 제거
 
 ```py
 class Solution:
     def isValid(self, s: str) -> bool:
-        
-        while 1:
-            p = s
-            s = s.replace('()', '').replace('{}', '').replace('[]', '')
-            if len(s) == len(p): break
-                
-        return False if s else True
-```
-{:.python}
-
-정규식이 아닌 replace 함수를 사용하였다. 정규식과 거의 유사하지만, 실행시간은 44 ms 로 월등히 빨랐다.
-
-## Stack
-
-```py
-class Solution:
-    def isValid(self, s: str) -> bool:
-        
         stack = []
         d = {')': '(', '}': '{', ']': '['}
         
@@ -62,14 +47,13 @@ class Solution:
             if stack and x in d.keys():
                 if stack[-1] == d[x]: stack.pop()
                 else: return False
-            else: stack.append(x)
+            else:
+                stack.append(x)
                 
-        return False if stack else True
+        return stack == []
 ```
 {:.python}
 
-문자열을 x 로 순회하면서, stack 이 비어있거나 x가 여는 괄호라면 이를 stack 에 추가한다. 그리고 stack 에 뭔가 채워져있는 상태에서 닫는 괄호가 나온다면, stack 의 제일 마지막 문자와 비교하여, 짝이 맞는 경우네는 stack 을 pop 하고, 아닌 경우에는 즉시 False 를 리턴한다.
+문자열을 x 로 순회하면서, stack 이 비어있거나 x가 닫는괄호가 아니라면 (즉 여는괄호라면) 이를 stack 에 추가한다. 그리고 stack 에 뭔가 채워져 있으면서 닫는괄호가 나온다면, stack 의 제일 마지막 문자와 비교하여, 괄호 짝이 제대로 맞는 경우에는 stack 을 pop 하고, 맞지 않다면 더 이상 검증할 필요없이 즉시 False 를 리턴한다.
 
-반복 종료에도 stack 이 남아있다면 False 를, 비어있다면 True 를 리턴하는 구조다.
-
-실행시간은 32 ms 가 나왔다.
+최종적으로는 stack 이 빈 리스트인지 여부를 판별한다.
