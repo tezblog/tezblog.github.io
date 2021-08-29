@@ -2,7 +2,7 @@
 layout: post
 title: "3. Longest Substring Without Repeating Characters"
 updated: 2021-08-29
-tags: [leetccode,list]
+tags: [leetcode,list]
 ---
 
 ## 문제
