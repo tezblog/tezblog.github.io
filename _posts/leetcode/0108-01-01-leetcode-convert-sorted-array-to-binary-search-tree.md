@@ -2,7 +2,7 @@
 layout: post
 title: "108. Convert Sorted Array to Binary Search Tree"
 updated: 2021-08-27
-tags: [leetcode,easy,array,divide_and_conquer,tree,binary_search_tree,binary_tree]
+tags: [leetcode]
 ---
 
 ## 문제
