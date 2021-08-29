@@ -8,7 +8,7 @@ title: leetcode
   <h1>{{ page.title }} 태그 포스팅들</h1>
 </div>
 <div id="tag-content">
-    {% assign root = "leetcode" %}
+    {% assign root = page.title %}
     {% assign subs = "list" | split: "," %}
     {% assign subs_desc = "Array and Linked List:" | split: "," %}
     {% assign to = subs.size | minus: 1 %}
