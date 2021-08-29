@@ -46,6 +46,7 @@ class Solution:
         
         return f(n)
 ```
+{:.python}
 
 Python 의 데코레이터를 사용하여 Memoization 을 구현하였다. `f(n)` 값을 찾아야 할 때 우선 cache 에 결과값이 저장되어 있는지를 검사하고, cache 에 없을 때 재귀호출로 계산하여 저장해두는 구조다.
 
