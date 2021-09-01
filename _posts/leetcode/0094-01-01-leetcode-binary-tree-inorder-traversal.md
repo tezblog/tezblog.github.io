@@ -2,7 +2,7 @@
 layout: post
 title: "94. Binary Tree Inorder Traversal"
 updated: 2021-08-25
-tags: [leetcode,easy,stack,tree,depth_first_search,binary_tree]
+tags: [leetcode,graph]
 ---
 
 ## 문제
@@ -11,12 +11,13 @@ tags: [leetcode,easy,stack,tree,depth_first_search,binary_tree]
 
 주어진 이진 트리를 Inorder 순회하는 코드를 구현하면 된다.
 
-## Recursive
+이진 트리는 보통 세가지 순회 방법 (Preorder, Inorder, Postorder) 을 들고는 하는데, 구체적인 내용은 [위키피디아](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)나 포털에서 따로 검색해 보길 권한다.
+
+## 재귀함수로 구현
 
 ```py
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        
         a = []
         
         def fn(tree, a):
@@ -30,8 +31,6 @@ class Solution:
         return a
 ```
 {:.python}
-
-실행시간은 28 ms 이었다.
 
 탐색한 노드 처리를 a 리스트에 그 값을 담는 것으로 하고있는데, 노드 처리를 하는 위치에 따라 순회 방식이 Preorder, Inorder, Postorder 로 구분된다. 아래와 같다.
 
@@ -59,12 +58,11 @@ def fn(tree, a):
 ```
 {:.python}
 
-## Iterative
+## 반복문으로 구현
 
 ```py
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        
         a = []
         stack = [(root, False)]
         
@@ -83,11 +81,9 @@ class Solution:
 ```
 {:.python}
 
-노드를 탐색할 때, 다음 노드를 탐색해야할 순서인지, 노드값을 처리해야 할 순서인지를 담기 위해 `(노드, 처리여부)` 의 튜플자료형을 stack 에 담아 처리한다.
+Stack 에서 노드를 꺼내 탐색할 때, 다음 노드를 탐색해야할 차례인지, 노드값을 처리해야 할 차례인지를 담기 위해 `(노드, 처리여부)` 의 튜플자료형을 stack 에 담아 처리한다.
 
 구글링을 해보면 다양한 반복문 코드들을 볼 수 있는데, 위 코드가 재귀호출 방식과도 유사하고, 다른 순회 방식과도 유사하기 때문에 개인적으로는 이 코드를 선호한다.
-
-실행시간은 32 ms 가 나왔다.
 
 반복문으로 구현된 Preorder, Inorder, Postorder 탐색들은 아래와 같다.
 
@@ -135,7 +131,6 @@ while stack:
 ```py
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        
         a = []
         n = root
         
@@ -153,5 +148,3 @@ class Solution:
 {:.python}
 
 노드 간 경로를 변형시켜서 Stack 과 같은 별도 메모리 없이 탐색하는 로직이다. 경로가 변형되기에 한번 탐색을 마치면 다시 탐색은 불가능하다.
-
-실행시간은 32 ms 이었다.
