@@ -18,6 +18,7 @@ title: leetcode
             <h2>{{ subs_desc[i] }}</h2>
         </div>
         {% for post in posts reversed %}
+            <p> {{ post.title }} </p>
             {% for x in subs[i] | split: "#" %}
                 {% assign check = 0 %}
                 {% if post.tags contains x %}
