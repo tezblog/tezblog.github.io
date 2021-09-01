@@ -19,14 +19,18 @@ title: leetcode
         </div>
         {% for post in posts reversed %}
             {% for x in subs[i] | split: "#" %}
+                {% assign check = 0 %}
                 {% if post.tags contains x %}
-                    <div class="post-list">
-                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                        <div class="post-desc">Last updated: {{ post.updated }}</div>
-                    </div>
+                    {% assign check = 1 %}
                     {% break %}
                 {% endif %}
             {% endfor %}
+            {% if check == 1 %}
+                <div class="post-list">
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <div class="post-desc">Last updated: {{ post.updated }}</div>
+                </div>
+            {% endif %}
         {% endfor %}
     {% endfor %}
 </div>
