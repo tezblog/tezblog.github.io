@@ -11,15 +11,13 @@ title: leetcode
     {% assign subs = "array#stack|node|design|math" | split: "|" %}
     {% assign subs_desc = "String, Array:|Linked List, Tree, Graph:|Back Tracking, Dynamic Programming, Divide and Conquer, Greedy:|Mathematics:" | split: "|" %}
     {% assign to = subs.size | minus: 1 %}
-    {% assign posts = site.tags[title] %}
+    {% assign posts = site.tags[page.title] %}
     
     {% for i in (0..to) %}
         <div class="sub-tag">
             <h2>{{ subs_desc[i] }}</h2>
         </div>
-        <p> {{ posts[1].title }} </p>
         {% for post in posts reversed %}
-            <p> {{ post.title }} </p>
             {% for x in subs[i] | split: "#" %}
                 {% assign check = 0 %}
                 {% if post.tags contains x %}
