@@ -8,8 +8,8 @@ title: leetcode
   <h1>{{ page.title }} 태그 포스팅들</h1>
 </div>
 <div id="tag-content">
-    {% assign subs = "array|node|design|math" | split: "|" %}
-    {% assign subs_desc = "String, Array:|Linked List, Tree, Graph:|Back Tracking, Dynamic Programming, Divide and Conquer, Greedy:|Mathematics:" | split: "|" %}
+    {% assign subs = "array|graph|design|math" | split: "|" %}
+    {% assign subs_desc = "String and Array:|Node and Graph:|Algorithm Design:|Mathematics:" | split: "|" %}
     {% assign to = subs.size | minus: 1 %}
     
     {% for i in (0..to) %}
@@ -19,12 +19,10 @@ title: leetcode
         {% assign tag = subs[i] %}
         {% assign sorted = site.tags[tag] %}
         {% for post in sorted reversed %}
-            {% if post.tags contains page.title %}
-                <div class="post-list">
-                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                    <div class="post-desc">Last updated: {{ post.updated }}</div>
-                </div>
-            {% endif %}
+            <div class="post-list">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="post-desc">Last updated: {{ post.updated }}</div>
+            </div>
         {% endfor %}
     {% endfor %}
 </div>

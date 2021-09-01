@@ -20,7 +20,6 @@ title: leetcode
         {% for post in posts reversed %}
             {% assign tsubs = subs[i] | split: "#" %}
             {% for x in tsubs %}
-                <p> {{ x }} </p>
                 {% assign check = 0 %}
                 {% if post.tags contains x %}
                     {% assign check = 1 %}

@@ -2,7 +2,7 @@
 layout: post
 title: "2. Add Two Numbers"
 updated: 2021-08-29
-tags: [leetcode,node]
+tags: [leetcode,graph]
 ---
 
 ## 문제
