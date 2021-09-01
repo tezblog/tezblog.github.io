@@ -2,7 +2,7 @@
 layout: post
 title: "53. Maximum Subarray"
 updated: 2021-08-25
-tags: [leetcode]
+tags: [leetcode,design]
 ---
 
 ## 문제
@@ -11,34 +11,15 @@ tags: [leetcode]
 
 Array 에서 연속된 수의 부분합들 중 가장 최대값을 구하는 문제다.
 
-## Brute Force
+가장 단순한 풀이는, 이중루프를 구현하여 모든 부분합 케이스를 탐색한 뒤, 가장 큰 부분합을 리턴하면 된다. 시간복잡도가 O(n^2) 이 되는 이 방법은 실행시간 초과로 문제를 통과할 수 없다. 다른 방식으로 해야하는데, Kadane 알고리즘이라 불리우는 DP 방식을 이용하여 해결할 수 있다.
+
+그리고 문제 말미에 보면 분할정복으로도 풀어보라고 제시하고 있다.
+
+## Kadane's Algorithm (DP 방식)
 
 ```py
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        
-        maxsub = float('-inf')
-        
-        for i, x in enumerate(nums):
-            sub = 0
-            for j, y in enumerate(nums[i:], i):
-                sub += y
-                maxsub = max(sub, maxsub)
-                
-        return maxsub
-```
-{:.python}
-
-이중루프를 구현하여 모든 부분합 케이스를 탐색한 뒤, 가장 컸던 부분합을 리턴하는 구조다.
-
-실행결과 시간초과로 문제를 통과할 수 없었다.
-
-## Dynamic Programming (Kadane's Algorithm)
-
-```py
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        
         maxsubs = [None] * len(nums)
         
         maxsubs[0] = nums[0]
@@ -59,9 +40,7 @@ maxsubs[n] = max(maxsubs[n-1] + nums[n], nums[n])
 
 nums 리스트의 n 번 인덱스까지의 최대 부분합은, n-1 번 인덱스까지의 최대부분합에 n 번 인덱스 값을 더한 것과, n 번 인덱스만의 값 중 더 큰 값에 해당한다는 의미다. 직전까지의 최대값에 현재값을 더했을 때 오히려 더 작아진다면, 끊고 새롭게 부분합을 시작하는 것이 당연할 것이다.
 
-실행시간은 60 ms 이었다.
-
-## Divide and Conquer
+## 분할정복 방식
 
 ```py
 class Solution:
@@ -79,7 +58,7 @@ class Solution:
 ```
 {:.python}
 
-각 변수가 나타내는 값의 의미는 아래와 같다.
+각 변수가 나타내는 값의 의미를 먼저 이해해야 한다.
 
 ```plaintext
 어떤 리스트가 있을 때...
@@ -99,5 +78,3 @@ t == 리스트의 전체합
 다시 l 과 r 을 구할때는 t 가 필요함을 알 수 있다. 따라서 재귀호출 과정에서도 t 를 `lt+rt` 로 계산해준다.
 
 즉 재귀호출로 리스트 조립을 하면서, l, m, r, t 값을 계속 구해나가고, 최종적으로는 답에 해당하는 m 값만을 리턴하는 구조다.
-
-실행시간은 88 ms 이었다.
