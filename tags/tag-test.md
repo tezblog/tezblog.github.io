@@ -8,7 +8,7 @@ title: leetcode
   <h1>{{ page.title }} 태그 포스팅들</h1>
 </div>
 <div id="tag-content">
-    {% assign subs = "[array#stack|node|design|math" | split: "|" %}
+    {% assign subs = "array#stack|node|design|math" | split: "|" %}
     {% assign subs_desc = "String, Array:|Linked List, Tree, Graph:|Back Tracking, Dynamic Programming, Divide and Conquer, Greedy:|Mathematics:" | split: "|" %}
     {% assign to = subs.size | minus: 1 %}
     {% assign posts = site.tags[title] %}
