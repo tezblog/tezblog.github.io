@@ -17,6 +17,7 @@ title: leetcode
         <div class="sub-tag">
             <h2>{{ subs_desc[i] }}</h2>
         </div>
+        <p> {{ posts[1].title }} </p>
         {% for post in posts reversed %}
             <p> {{ post.title }} </p>
             {% for x in subs[i] | split: "#" %}
